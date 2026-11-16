@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://sadam-hussain-safi.github.io/sitemap.xml
