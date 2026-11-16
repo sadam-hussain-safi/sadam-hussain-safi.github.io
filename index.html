@@ -3,56 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sadam Hussain Safi | Senior Software Engineer & UI/UX Developer</title>
-  <meta name="description" content="Official GitHub Developer Hub of Sadam Hussain Safi — Senior Software Engineer, UI/UX Developer, and Founder & CEO at Aria Tech Solutions." />
-  <meta name="keywords" content="Sadam Hussain Safi, Senior Software Engineer, UI/UX Developer, Aria Tech Solutions, Full-Stack Architect, Flutter, React, Python" />
-  <link rel="canonical" href="https://sadam-hussain-safi.github.io/" />
+  <title>Sadam Hussain Safi | Electric Engineering Hub</title>
+  <meta name="description" content="Official Engineering Hub of Sadam Hussain Safi — Frontend, Backend, & AI Engineer." />
+  <meta name="canonical" href="https://sadam-hussain-safi.github.io/" />
 
-  <!-- Google Structured Data (JSON-LD) for Direct Search Ranking -->
+  <!-- Google SEO Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sadam Hussain Safi",
     "url": "https://sadam-hussain-safi.github.io",
-    "sameAs": [
-      "https://github.com/sadam-hussain-safi",
-      "https://sadam-hussain-dev.netlify.app"
-    ],
-    "jobTitle": "Senior Software Engineer & UI/UX Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Aria Tech Solutions"
-    }
+    "jobTitle": "Frontend, Backend, & AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "Aria Tech Solutions" }
   }
   </script>
 
   <style>
-    :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; --muted: #94a3b8; }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-    body { background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 2rem; }
-    .container { max-width: 720px; background: var(--card); border: 1px solid #334155; border-radius: 16px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-    h1 { font-size: 2.25rem; margin-bottom: 0.5rem; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .subtitle { color: var(--accent); font-weight: 600; margin-bottom: 1.25rem; font-size: 1.1rem; }
-    p { color: var(--muted); line-height: 1.6; margin-bottom: 1.75rem; }
-    .links { display: flex; flex-wrap: wrap; gap: 1rem; }
-    a.btn { text-decoration: none; padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; transition: transform 0.15s ease; }
-    a.btn:hover { transform: translateY(-2px); }
-    .primary { background: var(--accent); color: #0f172a; }
-    .secondary { background: #334155; color: var(--text); }
+    /* High-Craft Electric Blue / Cyberpunk Theme */
+    :root {
+      --bg-dark: #010409;
+      --bg-panel: #0d1117;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      
+      --electric-blue: #00f2ff;
+      --electric-glow: rgba(0, 242, 255, 0.4);
+      --electric-arc: #fff;
+      --panel-shadow: 0 16px 40px rgba(0,0,0,0.8);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text); display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 2rem; overflow-x: hidden; }
+
+    /* SVG Electric Background Layer */
+    .bg-electric { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15; }
+
+    /* Main Container */
+    .hero-container {
+      position: relative;
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 4rem;
+      box-shadow: var(--panel-shadow);
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      transition: border-color 0.3s ease;
+    }
+    .hero-container:hover { border-color: var(--electric-blue); }
+
+    /* Left Content Column */
+    .hero-content { flex: 1; }
+    .hero-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--electric-blue);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      position: relative;
+    }
+    .hero-label::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--electric-blue);
+      box-shadow: 0 0 8px var(--electric-blue);
+    }
+    
+    .hero-name { font-size: 44px; font-weight: 800; color: #fff; margin-bottom: 0.5rem; letter-spacing: -1px; }
+    .hero-title { font-size: 18px; font-weight: 600; color: var(--electric-blue); margin-bottom: 1rem; }
+    .hero-desc { color: var(--text-muted); line-height: 1.7; font-size: 15px; margin-bottom: 2rem; max-width: 500px; }
+
+    /* Pill Badges */
+    .pill-container { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
+    .pill {
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      padding: 6px 14px;
+      background-color: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pill:hover { border-color: var(--electric-blue); color: var(--electric-blue); box-shadow: 0 0 10px rgba(0,242,255,0.2); transform: translateY(-1px); }
+    .pill-icon { width: 12px; height: 12px; fill: currentColor; }
+
+    /* Action Buttons */
+    .action-container { display: flex; gap: 1rem; }
+    .btn {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background-color: var(--electric-blue);
+      color: #010409;
+      box-shadow: 0 4px 14px rgba(0,242,255,0.3);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 20px rgba(0,242,255,0.5); transform: translateY(-2px); }
+    .btn-secondary {
+      background-color: #161b22;
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--electric-blue); color: var(--electric-blue); transform: translateY(-1px); }
+
+    /* RIGHT COLUMN: Electric Photo Module */
+    .photo-module {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Interactive SVG Electric Circuit */
+    .electric-circuit {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      filter: drop-shadow(0 0 6px var(--electric-blue));
+    }
+    
+    /* Profile Photo Container */
+    .photo-container {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--bg-panel); /* Mask border */
+      box-shadow: 0 0 30px rgba(0,242,255,0.15);
+      z-index: 1;
+    }
+    
+    /* Replace 'profile.png' with your actual cutout photo */
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* If your photo is a standard portrait, this filter enhances the cyber look */
+      filter: contrast(1.1) brightness(1.05) saturate(1.1);
+    }
+    
+    /* Geometric placeholder if profile.png is missing */
+    .photo-container::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(135deg, #161b22, #0d1117);
+      z-index: -1;
+    }
+
+    /* Electric Spark Particle Animation */
+    .spark {
+      position: absolute;
+      width: 4px; height: 4px;
+      background-color: var(--electric-arc);
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow: 0 0 8px #fff, 0 0 12px var(--electric-blue);
+    }
+
+    /* SVG Definitions for Icons */
+    .svg-defs { display: none; }
   </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Sadam Hussain Safi</h1>
-    <div class="subtitle">Senior Software Engineer &bull; UI/UX Developer &bull; Founder @ Aria Tech Solutions</div>
-    <p>Architecting scalable full-stack platforms, enterprise Flutter applications, and high-craft user interfaces. Explore my open-source engineering repositories and live portfolio case studies below.</p>
-    <div class="links">
-      <a class="btn primary" href="https://github.com/sadam-hussain-safi">GitHub Profile</a>
-      <a class="btn secondary" href="https://sadam-hussain-dev.netlify.app">Live Portfolio</a>
-      <a class="btn secondary" href="https://github.com/sadam-hussain-safi/wellcare-pharmacy-system">WellCare Enterprise POS</a>
-      <a class="btn secondary" href="https://github.com/sadam-hussain-safi/ai-support-agent">AI Support Agent</a>
+
+  <!-- Background SVG Circuitry (subtle overlay) -->
+  <svg class="bg-electric" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#00f2ff" stroke-width="0.5" fill="none" opacity="0.3">
+      <path d="M0,100 H1000 M0,200 H1000 M0,300 H1000 M0,400 H1000 M0,500 H1000 M0,600 H1000 M0,700 H1000 M0,800 H1000 M0,900 H1000"/>
+      <path d="M100,0 V1000 M200,0 V1000 M300,0 V1000 M400,0 V1000 M500,0 V1000 M600,0 V1000 M700,0 V1000 M800,0 V1000 M900,0 V1000"/>
+      <circle cx="500" cy="500" r="100"/>
+      <circle cx="500" cy="500" r="200"/>
+      <circle cx="500" cy="500" r="300"/>
+      <circle cx="500" cy="500" r="400"/>
+    </g>
+  </svg>
+
+  <main class="hero-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <div class="hero-label">ENGINEERING CORE // LIVE</div>
+      <h1 class="hero-name">Sadam Hussain Safi</h1>
+      <div class="hero-title">Frontend // Backend // AI Engineer</div>
+      <p class="hero-desc">Architecting robust full-stack platforms, scalable neural models, and high-performance cross-platform applications at Aria Tech Solutions.</p>
+
+      <div class="pill-container">
+        <div class="pill"><svg class="pill-icon"><use href="#icon-code"/></svg>React/Next</div>
+        <div class="pill"><svg class="pill-icon"><use href="#icon-code"/></svg>TypeScript</div>
+        <div class="pill"><svg class="pill-icon"><use href="#icon-database"/></svg>Node.js</div>
+        <div class="pill"><svg class="pill-icon"><use href="#icon-ai"/></svg>AI Agents</div>
+        <div class="pill"><svg class="pill-icon"><use href="#icon-code"/></svg>Flutter</div>
+        <div class="pill"><svg class="pill-icon"><use href="#icon-database"/></svg>Python</div>
+      </div>
+
+      <div class="action-container">
+        <a href="https://github.com/sadam-hussain-safi" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+          GitHub Profile
+        </a>
+        <a href="https://sadam-hussain-dev.netlify.app" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Portfolio
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: ELECTRIC PHOTO MODULE -->
+    <div class="photo-module">
+      
+      <!-- The Interactive SVG Electric Circuit Layer -->
+      <svg class="electric-circuit" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#00f2ff" stop-opacity="1"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <!-- Rotating Core Rings -->
+        <g filter="url(#glow)">
+          <circle cx="140" cy="140" r="130" stroke="#00f2ff" stroke-width="1.5" stroke-dasharray="20 15" fill="none">
+            <animateTransform attributeName="transform" type="rotate" from="0 140 140" to="360 140 140" dur="20s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="140" cy="140" r="118" stroke="#00f2ff" stroke-width="0.75" stroke-dasharray="5 10" fill="none" opacity="0.6">
+            <animateTransform attributeName="transform" type="rotate" from="360 140 140" to="0 140 140" dur="15s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Electric Arcs (Active on Hover) -->
+        <g id="arcs" stroke="url(#arcGrad)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0">
+          <path d="M40,140 A100,100 0 0,1 140,40" stroke-dasharray="10 5">
+            <animate attributeName="stroke-dashoffset" from="15" to="0" dur="0.3s" repeatCount="indefinite" />
+          </path>
+          <path d="M240,140 A100,100 0 0,1 140,240" stroke-dasharray="10 5">
+            <animate attributeName="stroke-dashoffset" from="0" to="15" dur="0.3s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Connection Nodes -->
+        <g fill="#00f2ff">
+          <circle cx="140" cy="10" r="3"/><circle cx="140" cy="270" r="3"/><circle cx="10" cy="140" r="3"/><circle cx="270" cy="140" r="3"/>
+        </g>
+      </svg>
+      
+      <!-- PHOTO CONTAINER -->
+      <div class="photo-container" id="photoContainer">
+        <!-- Replaced Placeholder with SVG for immediate visual health-check -->
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="#0d1117"/>
+          <g transform="translate(110,110)" stroke="#00f2ff" stroke-width="1" fill="none" opacity="0.8">
+            <circle r="60"/>
+            <path d="M-60,0 L60,0 M0,-60 L0,60 M-40,-40 L40,40 M-40,40 L40,-40"/>
+            <text x="0" y="80" text-anchor="middle" fill="#00f2ff" font-size="10" font-family="monospace">
+              ADD // PROFILE.PNG // HERE
+            </text>
+          </g>
+        </svg>
+        <!-- Replace 'profile.png' above with your cutout image -->
+      </div>
+
     </div>
   </main>
+
+  <!-- SVG Sprite Definitions for Pill Icons -->
+  <svg class="svg-defs">
+    <defs>
+      <g id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></g>
+      <g id="icon-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></g>
+      <g id="icon-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></g>
+    </defs>
+  </svg>
+
+  <script>
+    // --- Electric Interactivity Script ---
+    const container = document.getElementById('photoContainer');
+    const arcs = document.getElementById('arcs');
+    const module = document.querySelector('.photo-module');
+    
+    // 1. Activate Electrical Arcs on Hover
+    container.addEventListener('mouseenter', () => {
+      arcs.style.opacity = '1';
+      container.style.borderColor = 'var(--electric-blue)';
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      arcs.style.opacity = '0';
+      container.style.borderColor = 'var(--bg-panel)';
+    });
+
+    // 2. Spawn Interactive Sparks on Mouse Move
+    container.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.05) return; // Limit spark frequency
+      
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Calculate a point on the circular border based on mouse position
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const angle = Math.atan2(y - centerY, x - centerX);
+      const radius = rect.width / 2;
+      
+      const sparkX = centerX + radius * Math.cos(angle);
+      const sparkY = centerY + radius * Math.sin(angle);
+      
+      createSpark(sparkX, sparkY);
+    });
+
+    function createSpark(x, y) {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.left = ${x}px;
+      spark.style.top = ${y}px;
+      
+      // Random arc trajectory
+      const tx = (Math.random() - 0.5) * 60;
+      const ty = (Math.random() - 0.5) * 60;
+      spark.style.setProperty('--tx', ${tx}px);
+      spark.style.setProperty('--ty', ${ty}px);
+      
+      module.appendChild(spark);
+      
+      // Animate and remove
+      spark.animate([
+        { opacity: 1, transform: 'translate(0, 0) scale(1)' },
+        { opacity: 0, transform: 	ranslate(px, px) scale(0.1) }
+      ], {
+        duration: 400 + Math.random() * 300,
+        easing: 'ease-out'
+      }).onfinish = () => spark.remove();
+    }
+  </script>
+
 </body>
 </html>
